@@ -1,2 +1,5 @@
-# Renta-Mobiliario-2024
-Renta Mobiliario es un sistema creado en 2024 por Hibrid Filware para facilitar la venta y renta de sillas, mesas y mobiliario para eventos. Cuenta con interfaces modernas e intuitivas para gestionar clientes, productos e inventario de forma rápida y eficiente.
+# Renta Mobiliario
+
+Renta Mobiliario es un programa desarrollado en 2024 por Hibrid Filware, integrado por Armando Emmanuel Gómez Almaraz, Vanesa Cruz Cruz, José Alfredo Cruz Alvarado, Jeremy Gael Molina Reséndiz y Leonardo Daniel Álvarez.
+
+El sistema fue creado para un negocio dedicado a la venta y renta de mobiliario, como sillas, mesas, carpas y artículos para eventos, con el propósito de facilitar la administración de productos, clientes y pedidos de manera rápida y organizada. Además, cuenta con interfaces modernas, agradables e intuitivas que mejoran la experiencia del usuario, permitiendo realizar registros, consultas y control de inventario de forma sencilla y eficiente.
