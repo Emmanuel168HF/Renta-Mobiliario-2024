@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renta de Mobiliario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('images/fondo.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding: 20px;
+      margin: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #555;
+    }
+    h3 {
+      margin-top: 20px;
+      color: #555;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    form {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      font-weight: bold;
+    }
+    select, input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .resultado {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Renta de Mobiliario</h2>
+
+    <h3>Precios por pieza en pesos mexicanos:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de Mobiliario</th>
+          <th>Precio por Pieza</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tifanny</td>
+          <td>$70</td>
+        </tr>
+        <tr>
+          <td>Plegables</td>
+          <td>$50</td>
+        </tr>
+        <tr>
+          <td>Tolix</td>
+          <td>$80</td>
+        </tr>
+        <tr>
+          <td>Taburete</td>
+          <td>$60</td>
+        </tr>
+        <tr>
+          <td>Redondas</td>
+          <td>$250</td>
+        </tr>
+        <tr>
+          <td>Cuadradas</td>
+          <td>$200</td>
+        </tr>
+        <tr>
+          <td>Rectangulares</td>
+          <td>$300</td>
+        </tr>
+        <tr>
+          <td>Redondos (Mantel)</td>
+          <td>$30</td>
+        </tr>
+        <tr>
+          <td>Cuadrados (Mantel)</td>
+          <td>$25</td>
+        </tr>
+        <tr>
+          <td>Rectangulares (Mantel)</td>
+          <td>$35</td>
+        </tr>
+        <tr>
+          <td>Con Ventanas</td>
+          <td>$1000</td>
+        </tr>
+        <tr>
+          <td>Abiertas</td>
+          <td>$800</td>
+        </tr>
+        <tr>
+          <td>Jaima</td>
+          <td>$1200</td>
+        </tr>
+        <tr>
+          <td>Gigantes</td>
+          <td>$1500</td>
+        </tr>
+        <tr>
+          <td>Con Pelotas</td>
+          <td>$1200</td>
+        </tr>
+        <tr>
+          <td>Toboganes</td>
+          <td>$1800</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form id="formulario" method="post" action="procesar.php">
+      <label for="silla">Sillas:</label>
+      <select id="silla" name="silla">
+        <option value="tifanny">Tifanny</option>
+        <option value="plegables">Plegables</option>
+        <option value="tolix">Tolix</option>
+        <option value="taburete">Taburete</option>
+      </select>
+      <br><br>
+      <label for="cantidadSilla">Cantidad de sillas:</label>
+      <input type="number" id="cantidadSilla" name="cantidadSilla" min="0" value="0">
+      <br><br>
+
+      <label for="mesa">Mesas:</label>
+      <select id="mesa" name="mesa">
+        <option value="redondas">Redondas</option>
+        <option value="cuadradas">Cuadradas</option>
+        <option value="rectangulares">Rectangulares</option>
+      </select>
+      <br><br>
+      <label for="cantidadMesa">Cantidad de mesas:</label>
+      <input type="number" id="cantidadMesa" name="cantidadMesa" min="0" value="0">
+      <br><br>
+
+      <label for="mantel">Manteles:</label>
+      <select id="mantel" name="mantel">
+        <option value="redondos">Redondos</option>
+        <option value="cuadrados">Cuadrados</option>
+        <option value="rectangulares_mantel">Rectangulares</option>
+      </select>
+      <br><br>
+      <label for="colorMantel">Color del mantel:</label>
+      <select id="colorMantel" name="colorMantel">
+        <option value="blanco">Blanco</option>
+        <option value="rojo">Rojo</option>
+        <option value="azul">Azul</option>
+        <option value="verde">Verde</option>
+      </select>
+      <br><br>
+      <label for="cantidadMantel">Cantidad de manteles:</label>
+      <input type="number" id="cantidadMantel" name="cantidadMantel" min="0" value="0">
+      <br><br>
+
+      <label for="carpa">Carpas:</label>
+      <select id="carpa" name="carpa">
+        <option value="con_ventanas">Con Ventanas</option>
+        <option value="abiertas">Abiertas</option>
+        <option value="jaima">Jaima</option>
+      </select>
+      <br><br>
+      <label for="colorCarpa">Color de la carpa:</label>
+      <select id="colorCarpa" name="colorCarpa">
+        <option value="blanco">Blanco</option>
+        <option value="rojo">Rojo</option>
+        <option value="azul">Azul</option>
+        <option value="verde">Verde</option>
+      </select>
+      <br><br>
+      <label for="cantidadCarpa">Cantidad de carpas:</label>
+      <input type="number" id="cantidadCarpa" name="cantidadCarpa" min="0" value="0">
+      <br><br>
+
+      <label for="inflable">Inflables:</label>
+      <select id="inflable" name="inflable">
+        <option value="gigantes">Gigantes</option>
+        <option value="con_pelotas">Con Pelotas</option>
+        <option value="toboganes">Toboganes</option>
+      </select>
+      <br><br>
+      <label for="cantidadInflable">Cantidad de inflables:</label>
+      <input type="number" id="cantidadInflable" name="cantidadInflable" min="0" value="0">
+      <br><br>
+
+      <!-- Campos ocultos para enviar variables a PHP -->
+      <input type="hidden" id="silla_php" name="silla_php">
+      <input type="hidden" id="cantidadSilla_php" name="cantidadSilla_php">
+      <input type="hidden" id="mesa_php" name="mesa_php">
+      <input type="hidden" id="cantidadMesa_php" name="cantidadMesa_php">
+      <input type="hidden" id="mantel_php" name="mantel_php">
+      <input type="hidden" id="colorMantel_php" name="colorMantel_php">
+      <input type="hidden" id="cantidadMantel_php" name="cantidadMantel_php">
+      <input type="hidden" id="carpa_php" name="carpa_php">
+      <input type="hidden" id="colorCarpa_php" name="colorCarpa_php">
+      <input type="hidden" id="cantidadCarpa_php" name="cantidadCarpa_php">
+      <input type="hidden" id="inflable_php" name="inflable_php">
+      <input type="hidden" id="cantidadInflable_php" name="cantidadInflable_php">
+
+      <button type="submit">Calcular Precio</button>
+      <button type="button" onclick="irAtras()">Atrás</button>
+    </form>
+
+    <!-- Script para capturar y enviar los datos -->
+    <script src="/js/script_rentas.js"></script>
+  </div>
+</body>
+</html>
