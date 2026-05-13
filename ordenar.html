@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cliente</title>
+    <link rel="stylesheet" type="text/css" href="styles/style_ordenar.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Registro de Cliente y Alquiler</h1>
+        
+        <form id="registrationForm" action="guardar_datos.php" method="POST" onsubmit="return validarFormulario()">
+            <!-- Campos para el cliente -->
+            <h2>Información del Cliente</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="15"><br>
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required minlength="3" maxlength="15"><br>
+            
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required><br>
+            
+            <label for="no_telefono">Teléfono:</label>
+            <input type="tel" id="no_telefono" name="no_telefono" required pattern="\d{10}" maxlength="10"><br>
+            
+            <!-- Domicilio de Correspondencia -->
+            <h2>Domicilio de Correspondencia</h2>
+            <label for="estado_c">Estado:</label>
+            <input type="text" id="estado_c" name="estado_c" required><br>
+            
+            <label for="municipio_c">Municipio:</label>
+            <input type="text" id="municipio_c" name="municipio_c" required><br>
+            
+            <label for="colonia_c">Colonia:</label>
+            <input type="text" id="colonia_c" name="colonia_c" required><br>
+            
+            <label for="calle_c">Calle:</label>
+            <input type="text" id="calle_c" name="calle_c" required><br>
+            
+            <label for="no_calle_c">Número Exterior:</label>
+            <input type="number" id="no_calle_c" name="no_calle_c" required><br>
+            
+            <!-- Domicilio del Evento -->
+            <h2>Domicilio del Evento</h2>
+            <button type="button" onclick="copiarDomicilio()">Copiar Domicilio del Cliente</button><br>
+            
+            <label for="estado_e">Estado:</label>
+            <input type="text" id="estado_e" name="estado_e" required><br>
+            
+            <label for="municipio_e">Municipio:</label>
+            <input type="text" id="municipio_e" name="municipio_e" required><br>
+            
+            <label for="colonia_e">Colonia:</label>
+            <input type="text" id="colonia_e" name="colonia_e" required><br>
+            
+            <label for="calle_e">Calle:</label>
+            <input type="text" id="calle_e" name="calle_e" required><br>
+            
+            <label for="no_calle_e">Número Exterior:</label>
+            <input type="number" id="no_calle_e" name="no_calle_e" required><br>
+
+            <!-- Detalles del Alquiler -->
+            <h2>Detalles del Alquiler</h2>
+            <label for="fecha_evento">Fecha del Evento:</label>
+            <input type="date" id="fecha_evento" name="fecha_evento" required><br>
+            
+            <label for="hora_evento">Hora del Evento:</label>
+            <input type="time" id="hora_evento" name="hora_evento" required><br>
+            
+            <label for="hora_entrega">Hora de Entrega:</label>
+            <input type="time" id="hora_entrega" name="hora_entrega" required><br>
+            
+            <label for="fecha_devolucion">Fecha de Devolución:</label>
+            <input type="date" id="fecha_devolucion" name="fecha_devolucion" required><br>
+            
+            <label for="hora_devolucion">Hora de Devolución:</label>
+            <input type="time" id="hora_devolucion" name="hora_devolucion" required><br>
+            
+            <label for="total">Total:</label>
+            <input type="number" step="0.01" id="total" name="total" required><br>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit">Registrar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/script_ordenar.js"></script>
+</body>
+</html>
